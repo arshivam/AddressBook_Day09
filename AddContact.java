@@ -2,7 +2,7 @@ package com.bridgelabz.addressbook;
 import java.util.Scanner;
 
 public class AddContact {
-	 private String firstName;
+	  private String firstName;
 	    private String lastName;
 	    private long phoneNumber;
 	    private String email;
@@ -10,8 +10,12 @@ public class AddContact {
 	    private String city;
 	    private String state;
 	    private int zipCode;
+	    
 
-	    public String setFirstName(String firstName){
+	    public String getFirstName() {
+			return firstName;
+		}
+		public String setFirstName(String firstName){
 	        this.firstName = firstName;
 	        return firstName;
 	    }
@@ -23,7 +27,7 @@ public class AddContact {
 	        this.phoneNumber = phoneNumber;
 	        return phoneNumber;
 	    }
-	    public String setEmailId(String email){
+	    public String setEmail(String email){
 	        this.email = email;
 	        return email;
 	    }
@@ -39,44 +43,15 @@ public class AddContact {
 	        this.state = state;
 	        return state;
 	    }
-	    public int setZips(int zipCode) {
+	    public int setZipCode(int zipCode) {
 	        this.zipCode = zipCode;
 	        return zipCode;
 	    }
-	    public static void main(String[] args) {
-
-	        AddContact person = new AddContact();
-
-	        System.out.println("add person details");
-	        Scanner sc = new Scanner(System.in);
-
-	        System.out.println("Enter person first name: ");
-	        person.setFirstName(sc.next());
-
-	        System.out.println("Enter person last name: ");
-	        person.setLastName(sc.next());
-
-	        System.out.println("Enter mobile number: ");
-	        person.setPhoneNumber(sc.nextLong());
-
-	        System.out.println("Enter Email id: ");
-	        person.setEmailId(sc.next());
-
-	        System.out.println("Enter address: ");
-	        person.setAddress(sc.next());
-
-	        System.out.println("Enter city: ");
-	        person.setCity(sc.next());
-
-	        System.out.println("Enter State : ");
-	        person.setState(sc.next());
-
-	        System.out.println("Enter zip code : ");
-	        person.setZips(sc.nextInt());
-
-	     
-	        System.out.println("Name : " + person.firstName + " " + person.lastName + "\nPhone number : " + person.phoneNumber +
-	                           "\nEmail  : " + person.email + "\nAddress : " + person.address + "\nCity : " + person.city +
-	                           "\nState : " + person.state + "\nZipCode : " + person.zipCode);
-	    }
+	    @Override
+	    public String toString() {
+	        return "\nPerson Info [first Name = " + firstName + ", last Name = " + lastName + ", Email id = " + email +
+	                ", address = " + address + "," + " city = " + city + ", state = " + state + ", zipcode = " + zipCode + ", " +
+	                "phoneNumber = " + phoneNumber + "]\n";
+	        }
+	
 }
