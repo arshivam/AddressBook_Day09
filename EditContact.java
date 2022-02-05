@@ -12,7 +12,7 @@ public class EditContact {
 
 		AddContact person = new AddContact();
 
-		System.out.println("add person details");
+		System.out.println("Add person details");
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter person first name: ");
@@ -21,13 +21,12 @@ public class EditContact {
 		System.out.println("Enter person last name: ");
 		person.setLastName(sc.next());
 
-		System.out.println("Enter mobile number: ");
+		System.out.println("Enter Phone number: ");
 		person.setPhoneNumber(sc.nextLong());
 
-		System.out.println("Enter the Email id: ");
+		System.out.println("Enter  Email id: ");
 		person.setEmail(sc.next());
 
-		System.out.println("Enter address Details: ");
 		System.out.println("Enter address: ");
 		person.setAddress(sc.next());
 
@@ -69,13 +68,13 @@ public class EditContact {
 				System.out.println("Enter new city  ");
 				personList.get(indexOfPerson).setCity(sc.next());
 
-				System.out.println("Enter new zip: ");
+				System.out.println("Enter new zipCode : ");
 				personList.get(indexOfPerson).setZipCode(sc.nextInt());
 
 				System.out.println("Enter mobile number: ");
 				personList.get(indexOfPerson).setPhoneNumber(Long.parseLong(sc.next()));
 
-				System.out.println("Enter the Email id: ");
+				System.out.println("Enter Email id: ");
 				personList.get(indexOfPerson).setEmail(sc.next());
 
 				personList.get(indexOfPerson).setFirstName(searchName);
@@ -96,7 +95,7 @@ public class EditContact {
 		int choice;
 		do {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter ur choice 1: Add \n 2: Edit \n 3: Display Details \n 0: Exit ");
+			System.out.println("Enter your choice 1: Add contact \n 2: Edit contact \n 3: Display Contact Details \n 0: Exit ");
 			choice = sc.nextInt();
 
 			switch (choice) {

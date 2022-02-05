@@ -14,7 +14,7 @@ public class DeleteContact {
 
 		AddContact person = new AddContact();
 
-		System.out.println("add person details");
+		System.out.println("Add person details");
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter person first name: ");
@@ -26,20 +26,19 @@ public class DeleteContact {
 		System.out.println("Enter mobile number: ");
 		person.setPhoneNumber(sc.nextLong());
 
-		System.out.println("Enter the Email id: ");
+		System.out.println("Enter Email id: ");
 		person.setEmail(sc.next());
 
-		System.out.println("Enter address Details: ");
-		System.out.println("Enter address: ");
+		System.out.println("Enter address : ");
 		person.setAddress(sc.next());
 
 		System.out.println("Enter city: ");
 		person.setCity(sc.next());
 
-		System.out.println("Enter State name: ");
+		System.out.println("Enter State : ");
 		person.setState(sc.next());
 
-		System.out.println("Enter zip: ");
+		System.out.println("Enter zipCode : ");
 		person.setZipCode(sc.nextInt());
 
 		personList.add(person);
@@ -64,7 +63,7 @@ public class DeleteContact {
 			}
 			if (isFoundPerson) {
 
-				System.out.print("\nEnter new address: ");
+				System.out.println("Enter new address: ");
 				personList.get(indexOfPerson).setAddress(sc.next());
 
 				System.out.println("Enter new city  ");
@@ -76,7 +75,7 @@ public class DeleteContact {
 				System.out.println("Enter mobile number: ");
 				personList.get(indexOfPerson).setPhoneNumber(Long.parseLong(sc.next()));
 
-				System.out.println("Enter the Email id: ");
+				System.out.println("Enter Email id: ");
 				personList.get(indexOfPerson).setEmail(sc.next());
 
 				personList.get(indexOfPerson).setFirstName(searchName);
@@ -110,7 +109,7 @@ public class DeleteContact {
 		int choice;
 		do {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter ur choice \n1: Add \n2: Edit \n3: Display Details \n4: Delete \n0: Exit ");
+			System.out.println("Enter your choice \n1: Add Contact \n2: Edit Contact \n3: Display Contact Details \n4: Delete Contact \n0: Exit ");
 			choice = sc.nextInt();
 
 			switch (choice) {
